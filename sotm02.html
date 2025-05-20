@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project02</title>
+</head>
+<style>
+
+header{
+display:flex;
+flex-direction:row;
+}
+
+body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+.navbar {
+      background-color: #7121d1;
+      text-align: center;
+      display:flex;
+      justify-content:center;
+
+          }
+
+    .navbar a {
+      
+      color: #f2f2f2;
+      text-align: center;
+      padding: 20px 150px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      background-color: #929e95;
+       }
+
+#what{
+    width: 90%;
+    
+    margin: 20px auto;
+    background-color:white;
+    border: 0px solid black;
+    padding: 30px;
+    border-radius: 20px;
+}
+#what h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+        font-weight: bolder;
+    color: #7121d1;
+
+}
+#what p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    text-align: justify;
+   
+}
+
+.mainbox{
+    width: 90%;
+   
+    border: 0px solid black;
+    border-radius: 20px;
+    margin: 40px auto;
+    justify-content:center;
+    display: flex;
+    flex-wrap:wrap;
+    padding: 20px;
+
+}
+.box{
+    flex:1 1 300px;
+    max-width:32%;
+    padding:20px;
+    border: 0px;
+    
+    border-radius: 12px;
+    box-shadow: 0px 5px 30px gray;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+    .box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    .box h3 {
+color: #7121d1;
+
+        font-size: 20px;
+        
+    }
+ .box ul {
+        padding-left: 20px;
+    }
+
+    .box li {
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .box li::before {
+        content: '•';
+        color: var(--accent);
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+
+.mainbox2{
+    width: 90%;
+   
+    border: 0px solid black;
+    border-radius: 20px;
+    margin: 40px auto;
+    justify-content:center;
+    display: flex;
+    flex-wrap:wrap;
+    padding: 20px;
+
+}
+.box2{
+   flex:1 1 300px;
+    max-width:32%;
+    padding:20px;
+    border: 0px;
+    
+    border-radius: 12px;
+    box-shadow: 0px 5px 30px gray;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
+
+    .box2:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    .box2 h3 {
+color: #7121d1;
+
+        font-size: 20px;
+    }
+ .box2 ul {
+        padding-left: 20px;
+    }
+
+    .box2 li {
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .box2 li::before {
+        content: '•';
+        color: var(--accent);
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+
+
+
+
+
+
+footer {
+        background:#3e255d;
+        color: white;
+        padding: 50px 0 20px;
+        margin-top: 80px;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+    }
+
+    .footer-column h3 {
+        color: white;
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    .footer-column h3::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background: var(--gradient);
+    }
+
+    .footer-column p, .footer-column a {
+        color: #bbb;
+        margin-bottom: 15px;
+        display: block;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-column a:hover {
+        color: white;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .social-links a {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+        background: var(--primary);
+        transform: translateY(-3px);
+    }
+
+    .copyright {
+        text-align: center;
+        padding-top: 30px;
+        margin-top: 30px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        color: #aaa;
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+            padding: 15px;
+        }
+
+</style>
+
+<body>
+<header>
+<a href="sotm03.html"><img src="images/rightarrow.png">
+</a>
+
+
+
+
+</header>
+
+
+
+<nav>
+<div class="navbar">
+<a class="active" href="file:///D:/html%20work%20new%20mine/sotm.html">Home</a>
+    <a href="file:///D:/html%20work%20new%20mine/sotm02.html">Applications</a>
+    <a href="file:///D:/html%20work%20new%20mine/sotm03.html">History</a>
+    <a href="#">About</a>
+  </div>
+</nav>
+
+ <div id="what">
+        <h2>Applications Of Generative AI</h2>
+<p>Generative AI has a wide range of applications across various industries, transforming how businesses and individuals create and interact with content.</p>
+<p>
+ In creative fields, it powers tools for generating art, music, and writing, enabling artists and writers to explore new ideas quickly. In marketing, it helps create personalized advertisements, product descriptions, and social media content. Customer service benefits from AI-powered chatbots that provide instant, human-like responses. Healthcare leverages generative AI for drug discovery, medical imaging analysis, and personalized treatment plans.</p>
+<p>
+ Additionally, in software development, it assists in code generation, debugging, and documentation. Education also sees advancements with AI-generated tutoring systems and interactive learning materials. With its ability to automate and enhance creativity, generative AI is revolutionizing efficiency and innovation across multiple domains.
+</p>
+</div>
+
+<div class="mainbox">
+        
+        <div class="box">
+<h3> Content Creation</h3>
+                    <ul>
+<li>
+Text: Blog posts, stories, essays, product descriptions, scripts.</li>
+
+<li>Images: Art generation, logo design, illustrations (e.g., DALL·E, Midjourney).</li>
+
+<li>Video: Scene generation, animation, video upscaling.</li>
+</ul>
+</div>
+
+ <div class="box">
+ <h3> Education</h3>
+<ul>
+<li>
+Personalized learning materials.
+</li>
+
+<li>
+AI tutors and automatic quiz generation.
+</li>
+
+<li>
+Simplifying complex concepts visually or textually.
+</li>
+</ul>
+</div>
+
+ <div class="box">
+<h3>audio  & Music </h3>
+<ul>
+<li>
+Music composition in various genres.
+</li>
+
+<li>
+Voice cloning and synthesis (e.g., AI voice assistants).
+</li>
+
+<li>
+Sound effect generation for games and films.
+</li>
+</ul>
+</div>
+
+
+</div>
+
+<div class="mainbox2">
+        
+        <div class="box2">
+<h3> Business & Marketing</h3>
+<ul>
+<li>
+Generating ad copy, product reviews, social media content.
+</li>
+
+<li>
+Email personalization and chatbots.
+</li>
+
+<li>
+Market analysis using AI-generated summaries.
+</li>
+</ul>
+</div>
+
+<div class="box2">
+ <h3>  Healthcare</h3>
+<ul>
+<li>
+Medical report generation from imaging or test data.
+</li>
+
+<li>
+Synthesizing drug molecules with AI models.
+</li>
+
+<li>
+Patient interaction via AI chatbots.
+</li>
+</ul>
+</div>
+
+<div class="box2">
+ <h3>  Software Development</h3>
+<ul>
+<li>
+Code generation (e.g., GitHub Copilot).
+</li>
+
+<li>
+Bug detection and refactoring assistance.
+</li>
+
+<li>
+Generating documentation from codebases.
+</li>
+</ul>
+</div>
+</div>
+
+<footer>
+ <div class="footer-content">
+            <div class="footer-column">
+                <h3>Company</h3>
+                <p>Exploring the frontier of generative artificial intelligence and its transformative potential across industries.</p>
+                <div class="social-links">
+                     <img src="images/twitter.png"><i class="twitter"></i></a>
+                    <img src="images/fb.png"><i class="fb"></i></a>
+                    <img src="images/instagram.png"><i class="instagram"></i></a>
+                    <img src="images/youtube.png"><i class="youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <a href="#">Research Papers</a>
+                <a href="#">Tutorials</a>
+                <a href="#">Case Studies</a>
+                <a href="#">API Documentation</a>
+                <a href="#">Community Forum</a>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> info@genaihub.com</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 AI Boulevard, Tech City</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 GenAI. All rights reserved. | Created by Sunoy</p>
+        </div>
+
+
+    </footer>
+
+
+</body>
+</html>
+
+
+       
